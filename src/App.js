@@ -1,5 +1,4 @@
 import React from "react";
-import MiniSong from "./Components/MiniSong";
 import SideBar from "./Components/SideBar";
 import TopBar from "./Components/TopBar";
 import Song from "./Components/Song";
@@ -11,7 +10,7 @@ export default function App() {
       <div>
         <TopBar></TopBar>
       </div>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", width: "100%" }}>
         <SideBar></SideBar>
         <Song></Song>
       </div>

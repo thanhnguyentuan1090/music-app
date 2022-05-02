@@ -5,17 +5,21 @@
 justify-content: space-between;
   height: 50px;
   z-index: 999;
-  background-color: black;
-  color: aliceblue;
+  background-color:#f6f6f6;
+  color:#3e3e3e;
+  border-bottom: 1px solid #e9e9e9;
+  align-items: center;
 
 }
 .lefttopbar{display: flex;
   height: 50px;
+  align-items: center;
 }
 .righttopbar{
   display: flex;
   height: 50px;
   float: left;
+  align-items: center;
 }
 .searchform{
   width: 40%;
@@ -34,7 +38,8 @@ justify-content: space-between;
   height: 100%;
   justify-content: center;
   align-items: center;
- }
+  font-family:sans-serif;
+}
 .topbtn{
   display: flex;
   margin-right: 10px;
@@ -44,10 +49,21 @@ justify-content: space-between;
   font-family:sans-serif;
   
 }
+.logo{
+  display: flex;
+  align-items: center;
+}
 .logoimg{
   width: 40px;
   height: 40px;
   border-radius: 100vh;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.stellio{margin-left: -10px;
+  margin-right: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
 }
 .sidebar{
   position: fixed;
@@ -55,61 +71,71 @@ justify-content: space-between;
   height: 100%;
   padding-left: 20px;
   margin-top: 50px;
-  background-color: black;
-  color: aliceblue;
+  background-color: #f6f6f6;
+  color: #3e3e3e;
   z-index: 10;
-
-
 }
 .library{
-  
   font-size: .8rem;
-    letter-spacing: 1px;
+  letter-spacing: 1px;
+  padding-top:10px;
 }
 .sideitem{
-  display: block;
+  display: flex;
   margin-right: 10px;
   justify-content: left;
   padding-top: 20px;
-  
-  
   font-family:sans-serif;
+  gap: 1px;
 }
 .bigSongList{
+  width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #f6f6f6;
   margin-top: 50px;
-    margin-left: 15%;
-}
+  
 
+  
+}
+.songList__container{
+  margin-left: 14%;margin-right: 10%; margin-top: 40px;
+  
+  
+}
 .songList{
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
   gap: 20px;
+ 
 }
 .song{
-  display:flex;
-  padding: 0 0 22px;
-    position: relative;
+    display:flex;
     z-index: 2;
     flex-direction: column;
     text-align: center;
-    
-}
-.song:hover{
-
+    width: 100%;
+ 
 }
 .coverImg{
-  width: 150px;
-  height: 150px;
-  
+  width: 100%;
 }
+
 .playerBar{
   display:flex;
-  border: 1px gray solid;
+  border-top: 1px solid #e9e9e9;
   position: fixed;
   height: 50px;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: #f6f6f6;
   z-index: 999;
+}
+.playerBar{
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #3e3e3e;
 }

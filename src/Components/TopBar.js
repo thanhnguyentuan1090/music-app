@@ -10,6 +10,7 @@ export default function TopBar() {
         <div className="lefttopbar">
           <div className="logo">
             <img src={logo} className="logoimg" />
+            <div className="stellio">Stellio</div>
           </div>
           <div className="topbtn">Home</div>
           <div className="topbtn">Browser</div>
