@@ -10,6 +10,7 @@ import {
 
 export default function SideBar() {
   return (
+    <>
     <div className="sidebar">
       <div className="library ">library</div>
       <div className="sideitem">
@@ -33,5 +34,6 @@ export default function SideBar() {
         Artists
       </div>
     </div>
+    </>
   );
 }

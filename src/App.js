@@ -1,37 +1,42 @@
 import React from "react";
 import SideBar from "./components/SideBar";
 import TopBar from "./components/TopBar";
-import Song from "./components/Song";
-import Player from "./components/Player";
-import { Link } from "react-router-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import MusicList from "./pages/MusicList";
 import NotfoundPages from "./pages/NotfoundPages";
+import PlayerContextProvider from "./contexts/PlayerContext";
 
 export default function App() {
   return (
     <>
-      <div>
-        <TopBar></TopBar>
-      </div>
-      <div style={{ display: "flex", width: "100%" }}>
-        <SideBar></SideBar>
-        {/* <Song></Song> */}
-      </div>
-      <div className="App">
+    <div className="App">
+    <PlayerContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/nhac-tre" element={<MusicList />} />
-            <Route path="/nhac-trinh" element={<MusicList />} />
-            <Route path="*" element={<NotfoundPages />} />
+            <Route element={<TopBar />} >
+
+               <Route path="/" element={<Home />} />
+               <Route path="/nhac-tre" element={<MusicList />} />
+               <Route path="/nhac-trinh" element={<MusicList />} />
+               <Route path="/E-D" element={<MusicList />} />
+               <Route path="/pop" element={<MusicList />} />
+               <Route path="/Rap" element={<MusicList />} />
+               <Route path="/Jazz" element={<MusicList />} />
+               <Route path="/Coutry" element={<MusicList />} />
+               <Route path="/latin" element={<MusicList />} />
+               <Route path="/japan" element={<MusicList />} />
+               <Route path="/korea" element={<MusicList />} />
+               <Route path="/koloi" element={<MusicList />} />
+               <Route path="/rapviet" element={<MusicList />} />
+               <Route path="*" element={<NotfoundPages />} />
+
+            </Route>
           </Routes>
         </BrowserRouter>
-
-        {/* <Player></Player> */}
-      </div>
+        </PlayerContextProvider>
+    </div>
     </>
   );
 }
