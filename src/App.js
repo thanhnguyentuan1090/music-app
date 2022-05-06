@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SideBar from "./components/SideBar";
+import TopBar from "./components/TopBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
+import MusicList from "./pages/MusicList";
+import NotfoundPages from "./pages/NotfoundPages";
+import PlayerContextProvider from "./contexts/PlayerContext";
 
-function App() {
+export default function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <PlayerContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<TopBar />} >
+
+               <Route path="/" element={<Home />} />
+               <Route path="/nhac-tre" element={<MusicList />} />
+               <Route path="/nhac-trinh" element={<MusicList />} />
+               <Route path="/E-D" element={<MusicList />} />
+               <Route path="/pop" element={<MusicList />} />
+               <Route path="/Rap" element={<MusicList />} />
+               <Route path="/Jazz" element={<MusicList />} />
+               <Route path="/Coutry" element={<MusicList />} />
+               <Route path="/latin" element={<MusicList />} />
+               <Route path="/japan" element={<MusicList />} />
+               <Route path="/korea" element={<MusicList />} />
+               <Route path="/koloi" element={<MusicList />} />
+               <Route path="/rapviet" element={<MusicList />} />
+               <Route path="*" element={<NotfoundPages />} />
+
+            </Route>
+          </Routes>
+        </BrowserRouter>
+        </PlayerContextProvider>
     </div>
+    </>
   );
 }
-
-export default App;
