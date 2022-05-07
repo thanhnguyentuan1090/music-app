@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import "../assets/css/MusicList.css";
-import MusicControl from "../components/MusicControl";
+import MusicControl from "../Components/MusicControl";
 import {PlayerContext} from '../contexts/PlayerContext'
 
 function MusicList() {
