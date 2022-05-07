@@ -108,15 +108,16 @@ justify-content: space-between;
   gap: 20px;
   color: #3e3e3e;
 }
-.home{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px;
-  background-color: #f6f6f6;
-  margin-top: 50px;
-  padding-top: 10px;
-  padding-left: 10px;
-  cursor: pointer;
+
+
+
+.linknhac{
+  display: flex;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+align-items: center;
 
 }
 a:visited{
@@ -126,5 +127,7 @@ a:visited{
 a{
   text-decoration: none;
   color:#3e3e3e;
+  
+
 }
 
